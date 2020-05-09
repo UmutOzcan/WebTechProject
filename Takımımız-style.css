@@ -3,9 +3,15 @@
   background-color: #9AC0CD !important;
   width: %100;
   height: 75px;
-    
+  
+  
+  
+   
   
 }
+
+
+
 
 
 .nav-item{	
@@ -45,30 +51,52 @@ body{
 	
 }
 
+
 .welcome{
 	
 	text-align:center;
 	padding-bottom:30px;
-	color: white;
-		
+	color: #388E3C;
+	
+	
+	
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 .row{
 	
-	padding-top:30px;
+	padding-top:40px;
 	padding-left:20px;
-	padding-bottom:30px;
-	color: white;		
+	padding-bottom:20px;
+	color: white;	
+	
 	word-spacing:2px;
 	letter-spacing:1px;
 	
 }
 
 
-
+.row h1{
+	
+	color: #388E3C;
+}
 
 
 
@@ -88,7 +116,7 @@ footer{
 footer .row{
 	
 	color:black;
-	
+	padding-left:100px;
 }
 
 .list-unstyled a:link{
