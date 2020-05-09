@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	
-	<link rel="stylesheet" href="css/AnaSayfa-style.css">
+	<link rel="stylesheet" href="css/Formlar-style.css">
 
 
   
@@ -39,113 +39,108 @@
     </nav>
 	
 	
-	
-	
-	
-	<!--  Container kısmı -->
-	
 	<div class="container">	
    	
 		<div class="welcome">
 		
-		<h1> Siteme Hoşgeldiniz </h1>
+		<h1> Formlar </h1>
 				
 		</div>
-	
-	
-	<!-- Slider kısmı -->
-	
-	<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-  
-  
-    <div class="carousel-item active" >
-      <a href="Hakkımda.html"><img src="questionmark2.jpg" class="d-block w-100" alt="..." ></a>
-      <div class="carousel-caption d-none d-md-block" >
-        <h5>Hakkımda</h5>
-        <p>Ben kimim ? Nelerle uğraşırım ?</p>
-      </div>
-    </div>
-	
-	
-	
-    <div class="carousel-item">
-	  <a href="Şehrim.html"><img src="cark.jpg" class="d-block w-100" alt="..."></a>
-      
-      <div class="carousel-caption d-none d-md-block">
-	    <h5>Yaşadığım Şehir SAKARYA</h5>
-        <p>Kozmopolitan bir yapıya sahip olan Sakarya, ayrıca çok özel bir coğrafi konuma da sahip.</p>
-        
-      </div>
-    </div>
-	
-	
-	
-    <div class="carousel-item">
-	 <a href="Takımımız.html"><img src="sakaryaspor2.jpg" class="d-block w-100" alt="..."></a>
-      
-      <div class="carousel-caption d-none d-md-block">
-        <h5>SAKARYASPOR</h5>
-        <p>Şehrin önemli bir parçası Sakaryaspor.</p>
-      </div>
-    </div>
-  </div>
-  
-  
-  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-	
-	
-	
-	
-	
-	
-	<div class="row">
-    <div class="col">
-      <h1>Kimim Ben </h1>
-	  <p> İsmim Umut Yusuf, Sakarya Üniversitesi Bilgisayar Mühendisliği bölümünde okuyorum.
-	    Bilgisayar genel ilgi alanım. Oyunlardan uygulamalara, araştırmalardan kurguculuğa kadar birçok konuya merakım var.
-		Lise yıllarımdan itibaren bilgisayarla ilgiliydim zaten, daha sonra bunu meslek olarak seçebileceğimi düşündüm.	    
-		<br><br>
-		Şimdi önümde uzun bir eğitim ve iş hayatı var.
-	  </p>
-    </div>
-    <div class="col">
-      <h1>İçerik</h1>
 		
-				<a href="Hakkımda.html">Hakkımda</a><br>
+		<div class="row">
+		<div class="col-md-6">
+		
+		
+		<h2>Ad </h2> <input type="text" name="adi" id="adi" required="required"><br/><br>
+		<h2>Soyad </h2> <input type="text" name="soyadi" id="soyadi" required="required"><br/><br>
+		<h2>E-mail </h2> <input type="email" name="email" id="email" required="required"><br/><br>
+		
+
+		<h2> Cinsiyet </h2>
+
+		Erkek <input type="radio" name="cinsiyet" value="erkek" checked>
+		Kadın <input type="radio" name="cinsiyet" value="kadin">
+		
+		<br><br>
+		
+		<h2>Doğum Tarihi</h2> <input type="date" name="bday" id="bday" required="required">
+		
+		<br><br>
+		
+		<h2>Mesajınız</h2> <textarea name="mesaj" rows="10" cols="30" id="mesaj"></textarea>
+		
+		<br><br>
+
+		
+		
+		<button type="submit"> GÖNDER </button> <br/><br>
+		
+		
+		
+		
+		</div>
+		
+		
+		
+		<div class="col-md-6">
+		
+		
+		
+		
+		
+		<?php
+		
+				
+			echo " <h2> Ad </h2>";
+		 	echo $_POST["adi"]; 
+			echo " <br><br><br>";
 			
-				<a href="Şehrim.html">Şehrim</a><br>
+			echo " <h2> Soyad </h2>";
+			echo $_POST["soyadi"];
+			echo " <br><br><br>";
 			
-				<a href="Takımımız.html">Takımımız</a><br>
+			echo " <h2> E-mail </h2>";
+			echo $_POST["email"];
+			echo " <br><br><br>";
 			
-				<a href="Formlar.html">Formlar</a><br>
+			echo " <h2> Cinsiyet </h2>";
+			echo $_POST["cinsiyet"];
+			echo " <br><br><br>";
 			
-				<a href="İletişim.html">İletişim</a><br>
+			echo " <h2> Doğum Tarihi </h2>";
+			echo $_POST["bday"];
+			echo " <br><br><br>";
 			
-	    
-    </div>
-    </div>
-	
-	
-	
-	
-	
-</div>
+			echo " <h2> Mesaj </h2>";
+			echo $_POST["mesaj"];
+			echo " <br><br><br>";
+			
+					
+		
+		?>
+		
+		
+		
+		</div>
+		</div>
+		
+		
+		
+		
+		</form>
+		
+				
+	</div>
+
+
+
+
+
+
+
 	
 </body>
+
 
 <!-- Footer kısmı -->
 
@@ -204,6 +199,8 @@
  
 
 </footer>
+
+
 
     
 
